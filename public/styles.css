@@ -17,3 +17,44 @@
   transition: max-height 0.3s ease-in-out;
   overflow: hidden; /* Prevents content from overflowing during animation */
 }
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+  z-index: 1;
+}
+
+.carousel-item div {
+  position: relative;
+  z-index: 2;
+}
+a {
+  text-decoration: none;
+}
+
+a.bg-primary {
+  background: #e91e63; /* Custom color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+a.bg-primary:hover {
+  background: #c2185b;
+}
+
+a.bg-light {
+  background: #f8f8f8;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: background 0.3s ease;
+}
+
+a.bg-light:hover {
+  background: #e0e0e0;
+}

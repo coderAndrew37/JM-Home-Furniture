@@ -1,10 +1,10 @@
 import "./fetchContent.js";
 import "./contact.js";
-import "./modal.js";
 import "./newsletter.js";
 import "./leads.js";
 import "./animations.js";
 import "./authButton.js";
+import "./carousel.js";
 import { updateCartQuantity } from "../data/cart.js";
 import { initAddToCartListeners } from "./utils/cartUtils.js";
 
