@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img
           class="w-20 h-5"
           src="images/ratings/rating-${product.rating.stars}.png"
-          alt="${product.rating.stars} stars"
+          alt="${product.rating.stars * 10} stars"
         />
         <span class="ml-2 text-sm text-idcText">
           (${product.rating.count} reviews)
