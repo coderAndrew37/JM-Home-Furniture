@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("next").addEventListener("click", nextSlide);
   document.getElementById("prev").addEventListener("click", prevSlide);
 
-  // Auto-slide every 5 seconds
-  setInterval(nextSlide, 5000);
+  // Auto-slide every 7 seconds
+  setInterval(nextSlide, 7000);
 });

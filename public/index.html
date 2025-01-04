@@ -50,102 +50,144 @@
 
     <!-- Hero Section -->
     <section id="carousel" class="relative w-full h-[80vh] overflow-hidden">
-      <!-- Slides -->
       <div class="carousel-inner relative h-full">
+        <!-- Slide 1 -->
         <div
-          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-100"
+          class="carousel-item absolute inset-0 opacity-100"
           data-index="0"
           style="
-            background-image: url('/images/furniture1.jpg');
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url('/images/furniture1.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
           "
         >
-          <div
-            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
-          >
-            <h1 class="text-4xl md:text-6xl font-bold">
-              Transform Your Living Space
-            </h1>
-            <p class="mt-4 text-lg md:text-xl">
-              Discover elegant furniture to suit your style.
-            </p>
-            <div class="mt-6 space-x-4">
-              <a
-                href="#"
-                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Explore Collections</a
+          <div class="flex h-full items-center justify-center text-center p-6">
+            <div class="max-w-screen-md px-4">
+              <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg"
               >
-              <a
-                href="#"
-                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Contact Us</a
+                Transform Your Living Space
+              </h1>
+              <p
+                class="mt-4 text-lg md:text-xl lg:text-2xl text-white font-light"
               >
+                Discover elegant furniture crafted for modern homes.
+              </p>
+              <div
+                class="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-full shadow-lg font-semibold hover:from-red-500 hover:to-pink-500 transition"
+                >
+                  Explore Collections
+                </a>
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-white text-gray-800 rounded-full shadow-md font-semibold hover:bg-gray-200 transition"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Slide 2 -->
         <div
-          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-0"
+          class="carousel-item absolute inset-0 opacity-0"
           data-index="1"
           style="
-            background-image: url('/images/furniture2.jpg');
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url('/images/furniture2.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
           "
         >
-          <div
-            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
-          >
-            <h1 class="text-4xl md:text-6xl font-bold">
-              Quality You Can Trust
-            </h1>
-            <p class="mt-4 text-lg md:text-xl">
-              Premium furniture at unbeatable prices.
-            </p>
-            <div class="mt-6 space-x-4">
-              <a
-                href="#"
-                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Shop Now</a
+          <div class="flex h-full items-center justify-center text-center p-6">
+            <div class="max-w-screen-md px-4">
+              <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg"
               >
-              <a
-                href="#"
-                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Learn More</a
+                Quality You Can Trust
+              </h1>
+              <p
+                class="mt-4 text-lg md:text-xl lg:text-2xl text-white font-light"
               >
+                Premium furniture built for lasting value and style.
+              </p>
+              <div
+                class="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-full shadow-lg font-semibold hover:from-blue-500 hover:to-purple-500 transition"
+                >
+                  Shop Now
+                </a>
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-white text-gray-800 rounded-full shadow-md font-semibold hover:bg-gray-200 transition"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Slide 3 -->
         <div
-          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-0"
+          class="carousel-item absolute inset-0 opacity-0"
           data-index="2"
           style="
-            background-image: url('/images/furniture3.jpg');
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.3)
+              ),
+              url('/images/furniture3.jpg');
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
           "
         >
-          <div
-            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
-          >
-            <h1 class="text-4xl md:text-6xl font-bold">Style Meets Comfort</h1>
-            <p class="mt-4 text-lg md:text-xl">
-              Furniture designed for modern living.
-            </p>
-            <div class="mt-6 space-x-4">
-              <a
-                href="#"
-                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Shop Now</a
+          <div class="flex h-full items-center justify-center text-center p-6">
+            <div class="max-w-screen-md px-4">
+              <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg"
               >
-              <a
-                href="#"
-                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
-                >Contact Us</a
+                Style Meets Comfort
+              </h1>
+              <p
+                class="mt-4 text-lg md:text-xl lg:text-2xl text-white font-light"
               >
+                Elegant designs that bring warmth and luxury to your home.
+              </p>
+              <div
+                class="mt-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4"
+              >
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full shadow-lg font-semibold hover:from-teal-500 hover:to-green-500 transition"
+                >
+                  Shop Now
+                </a>
+                <a
+                  href="#"
+                  class="px-8 py-4 bg-white text-gray-800 rounded-full shadow-md font-semibold hover:bg-gray-200 transition"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -154,15 +196,15 @@
       <!-- Navigation Controls -->
       <button
         id="prev"
-        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 p-3 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
       >
-        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left text-white"></i>
       </button>
       <button
         id="next"
-        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 p-3 bg-black bg-opacity-50 rounded-full hover:bg-opacity-75"
       >
-        <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-right text-white"></i>
       </button>
     </section>
 
@@ -177,7 +219,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <img
-              src="/images/our-story.jpg"
+              src="/images/products/our-story.jpg"
               alt="Our Story"
               class="rounded-lg shadow-lg w-full"
             />
@@ -484,7 +526,7 @@
 
     <footer class="bg-idcBackground text-center py-4">
       <p class="text-idcText">
-        © 2024 Interior Design Kenya. All Rights Reserved.
+        © 2024 JM Home Furniture Mombasa. All Rights Reserved.
       </p>
     </footer>
 

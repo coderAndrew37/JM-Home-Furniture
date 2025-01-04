@@ -1,4 +1,5 @@
 // fetchContent.js
+import { baseUrl } from "./constants.js";
 import { testimonials, faqs } from "../data/data.js";
 import { formatCurrency } from "./utils/currency.js";
 import { initAddToCartListeners } from "./utils/cartUtils.js";
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchFeaturedProducts() {
     try {
-      const response = await fetch("/api/products?limit=12"); // Fetch 6 featured products
+      const response = await fetch(`${baseUrl}/api/products?limit=12`); // Fetch 6 featured products
       const data = await response.json();
 
       if (data.products && data.products.length > 0) {
