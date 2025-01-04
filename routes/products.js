@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // Fetch products with pagination
 router.get("/", async (req, res) => {
   const page = parseInt(req.query.page, 10) || 1; // Default to page 1
-  const limit = parseInt(req.query.limit, 10) || 15; // Default to 15 items per page
+  const limit = parseInt(req.query.limit, 10) || 18; // Default to 15 items per page
 
   try {
     // Count total products

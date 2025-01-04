@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchFeaturedProducts() {
     try {
-      const response = await fetch(`${baseUrl}/api/products?limit=12`); // Fetch 6 featured products
+      const response = await fetch(`${baseUrl}/api/products?limit=18`); // Fetch 6 featured products
       const data = await response.json();
 
       if (data.products && data.products.length > 0) {
