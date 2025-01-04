@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Portfolio Details | Interior Design Kenya</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="bg-idcBackground text-idcText font-idcSans">
+    <!-- Navbar -->
+    <nav class="bg-idcAccent sticky top-0 z-50 shadow-md">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <a href="/" class="text-xl font-bold text-idcPrimary"
+          >Interior Design</a
+        >
+        <nav id="mobile-nav" class="hidden md:flex space-x-8">
+          <a href="/" class="hover:text-idcPrimary">Home</a>
+          <a href="/#services" class="hover:text-idcPrimary">Services</a>
+          <a href="/#projects" class="hover:text-idcPrimary">Portfolio</a>
+          <a href="/contact.html" class="hover:text-idcPrimary">Contact</a>
+        </nav>
+        <button id="mobile-menu" class="md:hidden text-idcPrimary">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Portfolio Details Content -->
+    <main class="container mx-auto mt-20 px-6">
+      <div id="portfolio-details">
+        <!-- Content dynamically populated by portfolio.js -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-4 mt-10">
+      <p class="text-gray-400">
+        © 2024 Interior Design Kenya. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/scripts/portfolioDetails.js"></script>
+  </body>
+</html>

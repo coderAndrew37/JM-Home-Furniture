@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JM HoMe Furniture Mombasa | Stylish Living</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body class="bg-idcBackground text-idcText font-idcSans">
+    <!-- Navbar -->
+    <header class="bg-idcAccent sticky top-0 z-50">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <a href="/" class="text-xl font-bold text-idcPrimary"
+          >JM HoMe Furniture</a
+        >
+        <nav id="mobile-nav" class="hidden md:flex space-x-8">
+          <a href="#about" class="hover:text-idcHighlight">About</a>
+          <a href="#services" class="hover:text-idcHighlight">Products</a>
+          <a href="#projects" class="hover:text-idcHighlight">Gallery</a>
+          <a href="#contact" class="hover:text-idcHighlight">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a href="/checkout.html" class="relative">
+            <i class="fas fa-shopping-cart text-idcPrimary text-xl"></i>
+            <span
+              id="cart-count"
+              class="js-cart-quantity absolute top-0 right-0 bg-idcHighlight text-black text-sm rounded-full px-2 py-1 hidden"
+            >
+              0
+            </span>
+          </a>
+
+          <button
+            class="js-auth-button px-4 py-2 rounded-lg text-white"
+          ></button>
+          <button id="mobile-menu" class="md:hidden">
+            <i class="fas fa-bars text-idcPrimary text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="carousel" class="relative w-full h-[80vh] overflow-hidden">
+      <!-- Slides -->
+      <div class="carousel-inner relative h-full">
+        <div
+          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-100"
+          data-index="0"
+          style="
+            background-image: url('/images/furniture1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
+          >
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Transform Your Living Space
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+              Discover elegant furniture to suit your style.
+            </p>
+            <div class="mt-6 space-x-4">
+              <a
+                href="#"
+                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Explore Collections</a
+              >
+              <a
+                href="#"
+                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-0"
+          data-index="1"
+          style="
+            background-image: url('/images/furniture2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
+          >
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Quality You Can Trust
+            </h1>
+            <p class="mt-4 text-lg md:text-xl">
+              Premium furniture at unbeatable prices.
+            </p>
+            <div class="mt-6 space-x-4">
+              <a
+                href="#"
+                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Shop Now</a
+              >
+              <a
+                href="#"
+                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-0"
+          data-index="2"
+          style="
+            background-image: url('/images/furniture3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          "
+        >
+          <div
+            class="absolute inset-0 bg-dark bg-opacity-50 flex flex-col items-center justify-center text-center text-light p-6"
+          >
+            <h1 class="text-4xl md:text-6xl font-bold">Style Meets Comfort</h1>
+            <p class="mt-4 text-lg md:text-xl">
+              Furniture designed for modern living.
+            </p>
+            <div class="mt-6 space-x-4">
+              <a
+                href="#"
+                class="bg-primary text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Shop Now</a
+              >
+              <a
+                href="#"
+                class="bg-light text-dark px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Controls -->
+      <button
+        id="prev"
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button
+        id="next"
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-idcAccent py-16">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center md:text-left"
+        >
+          About Us
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <img
+              src="/images/our-story.jpg"
+              alt="Our Story"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div>
+            <p class="text-idcText text-lg">
+              Based in Mombasa, JM HoMe Furniture crafts premium furniture to
+              suit modern living with timeless style.
+            </p>
+            <p class="text-idcText text-lg">
+              Our commitment to quality, innovation, and customer satisfaction
+              sets us apart in delivering exceptional furniture solutions.
+            </p>
+            <a
+              href="/about.html"
+              class="px-6 py-3 bg-idcHighlight text-black rounded-lg font-bold hover:bg-opacity-90 inline-block"
+            >
+              Discover More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products" class="py-16 bg-idcBackground">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
+          Featured Products
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Products dynamically populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-16 bg-idcAccent text-idcText">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
+          Why Choose Us?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center bg-idcBackground p-6 rounded-lg shadow-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+          >
+            <i class="fas fa-couch text-idcHighlight text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Superior Craftsmanship</h3>
+            <p>We create custom furniture with unparalleled craftsmanship.</p>
+          </div>
+          <div
+            class="text-center bg-idcBackground p-6 rounded-lg shadow-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+          >
+            <i class="fas fa-smile text-idcHighlight text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Personalized Service</h3>
+            <p>We listen, design, and deliver to exceed your expectations.</p>
+          </div>
+          <div
+            class="text-center bg-idcBackground p-6 rounded-lg shadow-lg transition-transform hover:-translate-y-2 hover:shadow-2xl"
+          >
+            <i class="fas fa-box text-idcHighlight text-5xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Quality Assured</h3>
+            <p>
+              Our products meet the highest standards of durability and beauty.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="py-16 bg-idcAccent">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-4">
+          Stay Updated
+        </h2>
+        <p class="text-idcText text-lg mb-6">
+          Join our mailing list for exclusive furniture trends and offers!
+        </p>
+        <form
+          id="newsletterForm"
+          class="flex flex-col md:flex-row justify-center items-center gap-4"
+        >
+          <input
+            type="email"
+            id="newsletterEmail"
+            name="email"
+            placeholder="Enter your email address"
+            class="w-full md:w-1/2 p-3 rounded-lg text-idcText bg-idcBackground border border-idcHighlight focus:outline-none"
+            required
+          />
+          <button
+            type="submit"
+            class="px-6 py-3 bg-idcHighlight text-black font-bold rounded-lg hover:bg-opacity-90"
+          >
+            Subscribe
+          </button>
+        </form>
+        <p id="newsletterMessage" class="mt-4 text-sm"></p>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section id="lead-magnet" class="py-16 bg-idcBackground">
+      <div
+        class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-8"
+      >
+        <div>
+          <h2 class="text-3xl font-idcSerif text-idcPrimary mb-4">
+            Free Furniture Care Guide
+          </h2>
+          <p class="text-idcText text-lg mb-6">
+            Learn the secrets to maintaining your furniture with our free guide.
+            Perfect for homeowners and interior stylists!
+          </p>
+          <button
+            id="leadMagnetButton"
+            class="px-6 py-3 bg-idcHighlight text-black font-bold rounded-lg hover:bg-opacity-90 inline-block"
+          >
+            Get the Guide
+          </button>
+          <p id="leadMagnetMainMessage" class="mt-4 text-sm hidden"></p>
+        </div>
+        <div>
+          <img
+            src="/images/furniture-guide.jpg"
+            alt="Furniture Care Guide"
+            class="rounded-lg shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div
+        id="leadMagnetModal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      >
+        <div class="bg-idcBackground rounded-lg p-6 w-full max-w-sm">
+          <h3 class="text-xl font-bold text-idcPrimary mb-4">
+            Enter Your Email
+          </h3>
+          <p class="text-idcText mb-4">We’ll email you the free guide.</p>
+          <form id="leadMagnetForm" class="space-y-4">
+            <input
+              type="email"
+              id="leadMagnetEmail"
+              placeholder="Enter your email address"
+              class="w-full p-3 rounded-lg border border-idcHighlight focus:outline-none"
+              required
+            />
+            <button
+              type="submit"
+              class="w-full px-4 py-2 bg-idcHighlight text-black font-bold rounded-lg hover:bg-opacity-90"
+            >
+              Send Me the Guide
+            </button>
+          </form>
+          <button
+            id="leadMagnetClose"
+            class="w-full mt-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-500"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-16 bg-idcBackground">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
+          Frequently Asked Questions
+        </h2>
+        <div class="space-y-4">
+          <!-- FAQ Items will be dynamically populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6 text-center">
+          Contact Us
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <form class="js-contact-form bg-idcAccent p-6 rounded">
+            <div class="mb-4">
+              <label for="name" class="block text-idcText">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                class="w-full mt-1 p-2 bg-idcBackground text-idcText rounded"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-idcText">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                class="w-full mt-1 p-2 bg-idcBackground text-idcText rounded"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-idcText">Message</label>
+              <textarea
+                id="message"
+                rows="4"
+                name="message"
+                placeholder="Enter your message"
+                class="w-full mt-1 p-2 bg-idcBackground text-idcText rounded"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full px-4 py-2 bg-idcHighlight hover:bg-opacity-90 text-black font-bold rounded"
+            >
+              Send Message
+            </button>
+            <div class="spinner-container hidden mt-4 flex justify-center">
+              <div class="spinner-border text-idcHighlight" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <p class="form-message mt-4 text-sm"></p>
+          </form>
+
+          <div class="bg-idcAccent p-6 rounded text-idcText">
+            <h3 class="text-xl font-semibold text-idcPrimary mb-4">
+              Reach Out to Us
+            </h3>
+            <div class="mb-4">
+              <i class="fas fa-envelope text-idcHighlight mr-3"></i>
+              <span
+                >Email:
+                <a
+                  href="mailto:info@jmhome.co.ke"
+                  class="hover:underline text-idcHighlight"
+                  >info@jmhome.co.ke</a
+                ></span
+              >
+            </div>
+            <div class="mb-4">
+              <i class="fas fa-phone text-idcHighlight mr-3"></i>
+              <span
+                >Phone:
+                <a
+                  href="tel:+254700123456"
+                  class="hover:underline text-idcHighlight"
+                  >+254 700 123 456</a
+                ></span
+              >
+            </div>
+            <div class="mb-4">
+              <i class="fab fa-facebook text-idcHighlight mr-3"></i>
+              <span
+                >Facebook:
+                <a
+                  href="https://facebook.com/jmhomefurniture"
+                  class="hover:underline text-idcHighlight"
+                  >JM Home Furniture</a
+                ></span
+              >
+            </div>
+            <div class="mb-4">
+              <i class="fas fa-map-marker-alt text-idcHighlight mr-3"></i>
+              <span>Location: Mombasa, Kenya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Location Section -->
+    <section id="location" class="py-16 bg-idcAccent">
+      <div class="text-center px-6">
+        <h2 class="text-3xl font-idcSerif text-idcPrimary mb-6">
+          Visit Our Showroom
+        </h2>
+        <p class="text-idcText mb-6">
+          Explore our collection in person! Conveniently located in Mombasa,
+          Kenya.
+        </p>
+      </div>
+
+      <div class="w-screen">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31771.002357080337!2d39.6819459!3d-4.050525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184013123456!2sMombasa%2C%20Kenya!5e0!3m2!1sen!2sus!4v1699999381985!5m2!1sen!2sus"
+          width="100%"
+          height="400"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer class="bg-idcBackground text-center py-4">
+      <p class="text-idcText">
+        © 2024 Interior Design Kenya. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      id="floatingWhatsApp"
+      href="#"
+      class="fixed bottom-4 right-4 bg-[#25D366] text-black py-3 px-6 rounded-lg shadow-lg flex items-center space-x-2 transition hover:bg-opacity-90 animate-shake"
+      data-service="General Inquiry"
+      data-whatsapp="Hello Tiffi, I would like to discuss a project with you."
+    >
+      <i class="fab fa-whatsapp text-2xl"></i>
+      <span>Chat on WhatsApp</span>
+    </a>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script type="module" src="/scripts/index.js"></script>
+  </body>
+</html>

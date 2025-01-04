@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.accordion-collapse {
+  transition: none !important; /* Disable fade-in/fade-out animations */
+  visibility: visible !important; /* Keep the content visible */
+}
+
+.accordion-item .accordion-button:not(.collapsed) {
+  background-color: #292626; /* Accent color */
+  color: #f8f6f6; /* Primary color */
+}
+
+#mobile-nav {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden; /* Prevents content from overflowing during animation */
+}

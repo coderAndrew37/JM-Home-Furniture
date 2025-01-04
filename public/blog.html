@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>Blog Post | Interior Design Kenya</title>
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/output.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="bg-idcBackground text-idcText font-idcSans">
+    <!-- Navbar -->
+    <nav class="bg-idcAccent sticky top-0 z-50 shadow-md">
+      <div
+        class="container mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <a href="/" class="text-2xl font-idcSerif text-idcPrimary">
+          Interior Design
+        </a>
+        <div id="mobile-nav" class="hidden md:flex space-x-8">
+          <a href="/" class="hover:text-idcHighlight">Home</a>
+          <a href="#services" class="hover:text-idcHighlight">Services</a>
+          <a href="#projects" class="hover:text-idcHighlight">Portfolio</a>
+          <a href="#contact" class="hover:text-idcHighlight">Contact</a>
+        </div>
+        <button id="mobile-menu" class="md:hidden text-idcPrimary">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <main class="container mx-auto mt-16 px-6">
+      <div id="blog-content" class="prose prose-lg text-idcText"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-idcAccent text-center py-4 mt-10">
+      <p class="text-idcText">
+        © 2024 Interior Design Kenya. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/scripts/blog.js"></script>
+  </body>
+</html>
