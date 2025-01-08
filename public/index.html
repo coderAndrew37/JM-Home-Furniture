@@ -13,7 +13,6 @@
   </head>
 
   <body class="bg-idcBackground text-idcText font-idcSans">
-    <!-- Navbar -->
     <header class="bg-idcAccent sticky top-0 z-50">
       <div
         class="container mx-auto flex items-center justify-between py-4 px-6"
@@ -28,22 +27,50 @@
           <a href="#contact" class="hover:text-idcHighlight">Contact</a>
         </nav>
         <div class="flex items-center space-x-4">
+          <button
+            id="search-button"
+            class="text-xl text-idcPrimary px-4 py-2 rounded hover:bg-idcBackground"
+          >
+            <i class="fas fa-search"></i>
+          </button>
           <a href="/checkout.html" class="relative">
             <i class="fas fa-shopping-cart text-idcPrimary text-xl"></i>
             <span
               id="cart-count"
               class="js-cart-quantity absolute top-0 right-0 bg-idcHighlight text-black text-sm rounded-full px-2 py-1 hidden"
+              >0</span
             >
-              0
-            </span>
           </a>
-
           <button
             class="js-auth-button px-4 py-2 rounded-lg text-white"
           ></button>
           <button id="mobile-menu" class="md:hidden">
             <i class="fas fa-bars text-idcPrimary text-xl"></i>
           </button>
+        </div>
+      </div>
+      <!-- Sliding search bar directly in HTML -->
+      <div
+        id="search-bar"
+        class="fixed top-[-100px] left-0 right-0 bg-idcAccent z-50 px-6 py-4 transition-transform duration-300"
+      >
+        <div class="container mx-auto flex items-center">
+          <input
+            type="text"
+            id="search-input"
+            class="flex-grow p-3 rounded-lg text-idcText bg-idcBackground border border-idcHighlight focus:outline-none"
+            placeholder="Search for products..."
+          />
+          <button id="close-search" class="text-idcPrimary ml-4">
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <ul
+          id="search-suggestions"
+          class="bg-idcBackground rounded-lg shadow-lg mt-2 hidden"
+        ></ul>
+        <div id="search-loader" class="hidden text-center mt-2">
+          <i class="fas fa-spinner fa-spin text-idcHighlight text-xl"></i>
         </div>
       </div>
     </header>

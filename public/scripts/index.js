@@ -7,6 +7,7 @@ import "./authButton.js";
 import "./carousel.js";
 import { updateCartQuantity } from "../data/cart.js";
 import { initAddToCartListeners } from "./utils/cartUtils.js";
+import "./search.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Update cart quantity on page load
