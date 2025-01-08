@@ -733,3 +733,50 @@
 2025-01-04T14:49:58.318Z [INFO]: Connected to MongoDB
 2025-01-04T14:50:23.740Z [INFO]: Server running on port 8000
 2025-01-04T14:50:25.029Z [INFO]: Connected to MongoDB
+2025-01-08T12:50:25.950Z [INFO]: Server running on port 8000
+2025-01-08T12:50:27.342Z [INFO]: Connected to MongoDB
+2025-01-08T12:58:28.057Z [INFO]: Server running on port 8000
+2025-01-08T12:58:29.494Z [INFO]: Connected to MongoDB
+2025-01-08T13:00:17.971Z [INFO]: Server running on port 8000
+2025-01-08T13:00:19.251Z [INFO]: Connected to MongoDB
+2025-01-08T13:01:36.676Z [INFO]: Server running on port 8000
+2025-01-08T13:01:37.825Z [INFO]: Connected to MongoDB
+2025-01-08T13:16:28.473Z [INFO]: Server running on port 8000
+2025-01-08T13:16:29.909Z [INFO]: Connected to MongoDB
+2025-01-08T13:17:53.754Z [INFO]: Server running on port 8000
+2025-01-08T13:17:55.336Z [INFO]: Connected to MongoDB
+2025-01-08T13:18:05.440Z [INFO]: Server running on port 8000
+2025-01-08T13:18:06.430Z [INFO]: Connected to MongoDB
+2025-01-08T13:20:19.527Z [INFO]: Server running on port 8000
+2025-01-08T13:20:20.748Z [INFO]: Connected to MongoDB
+2025-01-08T13:20:29.134Z [INFO]: Server running on port 8000
+2025-01-08T13:20:30.748Z [INFO]: Connected to MongoDB
+2025-01-08T13:20:44.050Z [INFO]: Server running on port 8000
+2025-01-08T13:20:45.206Z [INFO]: Connected to MongoDB
+2025-01-08T13:23:14.735Z [INFO]: Server running on port 8000
+2025-01-08T13:23:20.029Z [INFO]: Server running on port 8000
+2025-01-08T13:23:44.479Z [ERROR]: Could not connect to MongoDB querySrv ETIMEOUT _mongodb._tcp.massage-spa-kenya.e3d3e.mongodb.net
+2025-01-08T14:02:19.449Z [INFO]: Server running on port 8000
+2025-01-08T14:02:20.675Z [INFO]: Connected to MongoDB
+2025-01-08T14:04:42.235Z [INFO]: Server running on port 8000
+2025-01-08T14:04:45.838Z [INFO]: Connected to MongoDB
+2025-01-08T14:04:59.361Z [INFO]: Server running on port 8000
+2025-01-08T14:05:01.988Z [INFO]: Connected to MongoDB
+2025-01-08T14:07:04.631Z [INFO]: Server running on port 8000
+2025-01-08T14:07:06.073Z [INFO]: Connected to MongoDB
+2025-01-08T14:07:09.395Z [INFO]: Server running on port 8000
+2025-01-08T14:07:13.173Z [INFO]: Connected to MongoDB
+2025-01-08T14:07:31.101Z [INFO]: Server running on port 8000
+2025-01-08T14:07:33.920Z [INFO]: Connected to MongoDB
+2025-01-08T14:10:31.090Z [INFO]: Server running on port 8000
+2025-01-08T14:10:32.230Z [INFO]: Connected to MongoDB
+2025-01-08T14:28:08.083Z [INFO]: Server running on port 8000
+2025-01-08T14:28:09.729Z [INFO]: Connected to MongoDB
+2025-01-08T14:28:54.407Z [INFO]: Server running on port 8000
+2025-01-08T14:28:56.631Z [INFO]: Connected to MongoDB
+2025-01-08T14:29:53.995Z [INFO]: Server running on port 8000
+2025-01-08T14:29:57.435Z [INFO]: Connected to MongoDB
+2025-01-08T14:35:51.553Z [INFO]: Server running on port 8000
+2025-01-08T14:35:53.072Z [INFO]: Connected to MongoDB
+2025-01-08T14:36:00.898Z [INFO]: Server running on port 8000
+2025-01-08T14:36:03.161Z [INFO]: Connected to MongoDB

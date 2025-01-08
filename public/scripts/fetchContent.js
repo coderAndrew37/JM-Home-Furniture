@@ -76,14 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const featuredProductsContainer = document.querySelector(
     "#featured-products .grid"
   );
+  const skeletonContainer = document.querySelector(
+    "#featured-products .skeletons"
+  );
+  const paginationContainer = document.getElementById("pagination");
+  let currentPage = 1;
+  const productsPerPage = 12;
 
-  async function fetchFeaturedProducts() {
+  async function fetchFeaturedProducts(page = 1) {
     try {
-      const response = await fetch(`${baseUrl}/api/products?limit=18`); // Fetch 6 featured products
+      // Show skeletons and hide products
+      toggleSkeletons(true);
+
+      const response = await fetch(
+        `${baseUrl}/api/products?page=${page}&limit=${productsPerPage}`
+      );
       const data = await response.json();
 
       if (data.products && data.products.length > 0) {
         renderFeaturedProducts(data.products);
+        renderPagination(data.currentPage, data.totalPages);
       } else {
         featuredProductsContainer.innerHTML = `
           <p class="text-center text-lg text-idcText">
@@ -96,6 +108,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="text-center text-lg text-idcText text-red-600">
           Failed to load products. Please try again later.
         </p>`;
+    } finally {
+      // Hide skeletons once loading is complete
+      toggleSkeletons(false);
+    }
+  }
+
+  function toggleSkeletons(show) {
+    if (show) {
+      skeletonContainer.classList.remove("hidden");
+      featuredProductsContainer.classList.add("hidden");
+    } else {
+      skeletonContainer.classList.add("hidden");
+      featuredProductsContainer.classList.remove("hidden");
     }
   }
 
@@ -103,8 +128,50 @@ document.addEventListener("DOMContentLoaded", () => {
     featuredProductsContainer.innerHTML = products
       .map((product) => generateProductHTML(product))
       .join("");
-    // Initialize Add-to-Cart buttons
     initAddToCartListeners(); // Attach listeners after rendering
+  }
+
+  function renderPagination(current, total) {
+    paginationContainer.innerHTML = ""; // Clear existing pagination
+
+    const createButton = (label, isActive, isDisabled, page) => {
+      const btnClass = `px-4 py-2 mx-1 text-sm font-medium ${
+        isActive
+          ? "bg-idcPrimary text-white"
+          : "bg-white text-idcPrimary hover:bg-idcHighlight"
+      } ${
+        isDisabled
+          ? "cursor-not-allowed opacity-50"
+          : "border border-idcPrimary rounded-md"
+      }`;
+
+      const button = document.createElement("button");
+      button.className = btnClass;
+      button.textContent = label;
+      button.disabled = isDisabled;
+      if (!isDisabled) {
+        button.addEventListener("click", () => {
+          currentPage = page;
+          fetchFeaturedProducts(currentPage);
+        });
+      }
+      return button;
+    };
+
+    // Previous Button
+    paginationContainer.appendChild(
+      createButton("Previous", false, current === 1, current - 1)
+    );
+
+    // Page Numbers
+    for (let i = 1; i <= total; i++) {
+      paginationContainer.appendChild(createButton(i, i === current, false, i));
+    }
+
+    // Next Button
+    paginationContainer.appendChild(
+      createButton("Next", false, current === total, current + 1)
+    );
   }
 
   function generateProductHTML(product) {
