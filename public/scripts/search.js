@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Live search suggestions
+  // Live search suggestions
   searchInput.addEventListener("input", async (event) => {
     const query = event.target.value.trim();
 
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const query = searchInput.value.trim();
       if (query.length < 2) return;
       await searchProducts(query);
+      closeSearchBar();
     }
   });
 
@@ -72,10 +74,18 @@ document.addEventListener("DOMContentLoaded", () => {
       suggestionItem.textContent = product.name;
       suggestionItem.addEventListener("click", () => {
         searchProducts(product.name);
+        closeSearchBar();
       });
       suggestionsList.appendChild(suggestionItem);
     });
     suggestionsList.classList.remove("hidden");
+  }
+
+  // Close search bar
+  function closeSearchBar() {
+    searchBar.style.transform = "translateY(-100px)";
+    clearSuggestions();
+    searchInput.value = "";
   }
 
   // Render no results
@@ -113,11 +123,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (data.products && data.products.length > 0) {
         renderSearchedProducts(data.products);
+        scrollToResults();
       } else {
         featuredProductsContainer.innerHTML = `
           <p class="text-center text-lg text-idcText">
             No products found for "${query}".
           </p>`;
+        scrollToResults();
       }
     } catch (error) {
       console.error("Error during product search:", error);
@@ -125,9 +137,18 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="text-center text-lg text-idcText text-red-600">
           Failed to load search results. Please try again.
         </p>`;
+      scrollToResults();
     } finally {
       searchLoader.classList.add("hidden");
     }
+  }
+
+  // Smooth scroll to search results
+  function scrollToResults() {
+    featuredProductsContainer.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }
 
   // Render searched products
