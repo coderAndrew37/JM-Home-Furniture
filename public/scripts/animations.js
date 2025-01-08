@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   // Navbar Animation
-  gsap.from("header", {
+  // Navbar Animation (excluding mobile-nav to avoid conflicts)
+  gsap.from("header > div:not(#mobile-nav)", {
     duration: 1,
     y: -100,
     opacity: 0,

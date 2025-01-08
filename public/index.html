@@ -20,12 +20,29 @@
         <a href="/" class="text-xl font-bold text-idcPrimary"
           >JM HoMe Furniture</a
         >
-        <nav id="mobile-nav" class="hidden md:flex space-x-8">
+        <nav
+          id="mobile-nav"
+          class="fixed top-0 right-0 w-4/5 max-w-xs h-full bg-idcAccent shadow-lg transform translate-x-full transition-transform duration-300 z-50 md:hidden"
+        >
+          <a href="#about" class="block p-4 hover:bg-idcHighlight">About</a>
+          <a href="#featured-products" class="block p-4 hover:bg-idcHighlight"
+            >Products</a
+          >
+          <a href="#projects" class="block p-4 hover:bg-idcHighlight"
+            >Gallery</a
+          >
+          <a href="#contact" class="block p-4 hover:bg-idcHighlight">Contact</a>
+        </nav>
+
+        <nav class="hidden md:flex space-x-8">
           <a href="#about" class="hover:text-idcHighlight">About</a>
-          <a href="#services" class="hover:text-idcHighlight">Products</a>
+          <a href="#featured-products" class="hover:text-idcHighlight"
+            >Products</a
+          >
           <a href="#projects" class="hover:text-idcHighlight">Gallery</a>
           <a href="#contact" class="hover:text-idcHighlight">Contact</a>
         </nav>
+
         <div class="flex items-center space-x-4">
           <button
             id="search-button"
